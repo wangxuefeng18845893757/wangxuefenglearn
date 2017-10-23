@@ -105,9 +105,179 @@ img{
 }
 @keyframes show {
     100%{
-        height:85px;
+        height:83px;
     }
 }
-.
 /*  nav  结束  */
+/*  header  开始  */
+.header{
+    height: 100px;
+    position: relative;
 
+}
+.logo{
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-top:22px;
+    background:orangered url("../img/mi-logo.png") center center no-repeat;
+}
+.header-menu{
+    float:left;
+    margin-left: 185px;
+    line-height: 100px;
+}
+.menu-item{
+    float: left;
+    padding: 0 10px;
+}
+.menu-item a{
+    color: rgb(51,51,51);
+}
+.menu-item a:hover{
+    color: #ff6700;
+}
+.sub-menu{
+    background: #fff;
+    height:0px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+    display: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-item:hover .sub-menu{
+    display: block;
+    animation: showtoo 0.3s ease-in forwards;
+}
+@keyframes showtoo {
+    100%{
+        height:229px;
+    }
+}
+.container{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1224px;
+}
+.container-item{
+    float: left;
+    width: 204px;
+    height: 201px;
+    text-align: center;
+    position: relative;
+}
+.sub-menu .container .flag{
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 17px;
+}
+.sub-menu .container .flag span{
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    font-size:12px;
+    padding: 1px 14px;
+}
+.img{
+    height: 110px;
+    display: block;
+    margin-bottom: 12px;
+}
+.title{
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.price{
+    height: 20px;
+    line-height: 20px;
+    color: #ff6700;
+    font-size: 12px;
+}
+.line{
+    border-left: 2px solid #e0e0e0;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top:40px;
+    display: block;
+}
+.search{
+    width: 296px;
+    height: 50px;
+    border: 1px solid #b0b0b0;
+    float: right;
+    overflow: hidden;
+    margin-top: 25px;
+    position: relative;
+
+}
+.search-text{
+    width: 225px;
+    height: 50px;
+    border: 0px;
+    border-right:1px solid #b0b0b0;
+    outline: none;
+    padding: 0 10px;
+    float: left;
+
+}
+.icon-fangdajing{
+    display: block;
+    width: 52px;
+    height: 50px;
+    color: #b0b0b0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+.search-botton {
+    width: 50px;
+    height:50px;
+    border: 0px;
+    float: left;
+    cursor: pointer;/*变手状*/
+    position: relative;
+    background: transparent;/*透明*/
+    outline: none;
+    z-index: 1;
+}
+
+.search-botton:hover+i{
+    color: white;
+    background: #ff6700;
+}
+.contant{
+
+    position: absolute;
+    top: 13px;
+    right: 60px;
+    text-align: right;
+    padding: 0 5px;
+
+}
+.contant a{
+    background: #eee;
+    display: inline-block;
+    margin-left: 5px;
+    color: #757575;
+    font-size: 12px;
+}
+.contant a:hover{
+    background: #ff6700;
+    color: white;
+}
+/*header 结束*/
+.right-page-item .right-page-item-top{
+    height: 143px;
+    background: red;
+}
