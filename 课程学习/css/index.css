@@ -358,7 +358,7 @@
 }
 /*小米明星商品结束*/
 /*vertical-align;middle;让文字在图片后面居中*/
-/*家电开始*/
+/*家电 智能 搭配 配件 周边开始*/
 .main-page{
     background: #f5f5f5;
     width: 1349px;
@@ -603,6 +603,105 @@
     top: 38px;
     right: 35px;
 }
+/*家电 智能 搭配 配件 周边结束*/
+/*为你推荐开始*/
+.list-star-goods .cfy{
+    border: none;
+    position: relative;
+    top: 0px;
+}
+.list-star-goods .cfy .price-star-goods{
+    margin: 10px 0px;
 
-/*家电结束*/
+}
+.list-star-goods .cfy:hover{
+    box-shadow:0px 7px 20px 5px rgba(0,0,0,0.1);
+    top:-3px;
+}
 
+/*为你推荐结束*/
+/*热评产品开始*/
+.buzz{
+    height: 415px;
+    margin-bottom: 14px;
+}
+.buzz-list{
+    height: 415px;
+}
+.buzz-item{
+    width: 296px;
+    height: 415px;
+    background: #fff;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    float: left;
+    position: relative;
+    top: 0;
+}
+.buzz-list .noleft{
+    margin-left: 0px;
+}
+.buzz-img{
+    margin-bottom: 28px;
+}
+.buzz-img img{
+    width: 296px;
+    height: 220px;
+}
+.buzz-desc{
+    width: 240px;
+    height: 72px;
+    margin: 0 28px 22px 28px;
+}
+.buzz-review{
+    width: 240px;
+    height: 72px;
+    display: block;
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+}
+.author{
+    width: 240px;
+    height: 18px;
+    text-align: left;
+    font-size: 12px;
+    color: #b0b0b0;
+    margin: 0 28px 8px;
+}
+.info{
+    width: 236px;
+    height: 22px;
+    margin: 0 30px;
+}
+.info-name{
+    color: #333;
+    font-size: 14px;
+}
+.info-line{
+    color: #e0e0e0;
+    margin: 0 3.5px;
+}
+.info-price{
+    display: inline;
+    color: #ff6700;
+}
+.buzz-item:hover{
+    box-shadow:0px 7px 20px 5px rgba(0,0,0,0.1);
+    top:-3px;
+}
+/*热评产品结束*/
+/*内容开始*/
+.buzz .buzz-list .buzz-border1{
+    border-top: 1px solid #ffac13;
+}
+.buzz .buzz-list .buzz-border2{
+    border-top: 1px solid #83c44e;
+}
+.buzz .buzz-list .buzz-border3{
+    border-top: 1px solid #2196f3;
+}
+.buzz .buzz-list .buzz-border4{
+    border-top: 1px solid #e53935;
+}
+/*内容结束*/
