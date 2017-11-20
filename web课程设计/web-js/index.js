@@ -53,3 +53,26 @@ oNewsSlide.onmouseover=function () {
 oNewsSlide.onmouseout=function () {
     run();
 }
+var oShowList=document.getElementsByClassName("show-list")[0];
+var aShowItem=document.getElementsByClassName("show-item");
+var speed=-2;
+var timer1;
+oShowList.innerHTML+=oShowList.innerHTML;
+oShowList.style.width=(aShowItem[0].offsetWidth+10)*10+"px";
+function run1() {
+    timer1 = setInterval(function () {
+        oShowList.style.left = oShowList.offsetLeft + speed + "px"
+        if (oShowList.offsetLeft <= -oShowList.offsetWidth / 2) {
+            oShowList.style.left = 0;
+        } else if (oShowList.offsetLeft >= 0) {
+            oShowList.style.left = -oShowList.offsetWidth / 2 + "px";
+        }
+    }, 30)
+}
+run1();
+oShowList.onmouseover=function () {
+    clearInterval(timer1);
+}
+oShowList.onmouseout=function () {
+    run1();
+}
