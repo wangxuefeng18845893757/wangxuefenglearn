@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/iconfont.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        width: 1226px;
+        height: 460px;
+    }
+    #slide{
+        width: 1226px;
+        height: 460px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #slide a{
+        display: none;
+    }
+    #slide .active{
+        display: block;
+    }
+    #btn{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        list-style: none;
+    }
+    #btn1{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 50px;
+        height: 20px;
+    }
+
+    #btn1 a{
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        color: white;
+        display: block;
+        float: left;
+        background: #000;
+        line-height: 20px;
+        text-align: center;
+    }
+    #prev-btn,#next-btn{
+        font-size: 12px;
+    }
+    #btn li{
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-left:10px;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        background: #000;
+        cursor: pointer;
+    }
+    #btn  .selected{
+        background: orange;
+    }
+</style>
+</head>
+<body>
+<div id="slide">
+    <div id="img-box">
+    <a href="#" class="active"><img src="../img/xmad_15078917729495_EOxQn.jpg"></a>
+    <a href="#"><img src="../img/xmad_15078779543656_mhMKg.jpg"></a>
+    <a href="#"><img src="../img/xmad_15077710101165_EjQbI.jpg"></a>
+    <a href="#"><img src="../img/xmad_15057916296159_nUYKy.jpg"></a>
+    </div>
+    <ul id="btn">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="btn1">
+        <a href="#"><i id="prev-btn" class="iconfont icon-xiaoyuhao"></i></a>
+        <a href="#"><i id="next-btn" class="iconfont icon-dayuhao1"></i></a>
+    </div>
+</div>
+<script>
+    var oSlide=document.getElementById("slide");
+    var oImg=document.getElementById("img-box");
+    var aLi=document.getElementsByTagName("li");
+    var aA=oImg.getElementsByTagName("a");
+    var oA1=document.getElementById("prev-btn");
+    var oA2=document.getElementById("next-btn");
+    var count=0;
+    var timer;
+    console.log(aA);
+    for (i=0;i<aLi.length;i++){
+        aLi[i].index=i;
+        aLi[i].onmouseover=function () {
+            count=this.index;
+            changeImg(this.index);
+        }
+    }
+    oA2.onclick=function () {
+        count++;
+        if(count>=aA.length){
+            count=0;
+        }
+        changeImg(count);
+    }
+    oA1.onclick=function () {
+        count--;
+        if(count<0){
+            count=aA.length-1;
+        }
+        changeImg(count);
+    }
+    function changeImg(idx) {// 在函数里 this 指向 window
+        for (j = 0; j < aLi.length; j++) {
+            aLi[j].className = "";
+            aA[j].className="";
+        }
+        aLi[idx].className = "selected";
+        aA[idx].className="active";
+    }
+    function run() {
+        timer=setInterval(function () {
+        oA2.onclick();
+    },1000)}
+    run();
+    oSlide.onmouseover=function () {
+        clearInterval(timer);
+    }
+    oSlide.onmouseout=function () {
+        run();
+    }
+</script>
+</body>
+</html>

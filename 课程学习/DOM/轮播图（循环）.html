@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            margin: 50px auto;
+            border: 1px solid #000;
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        ul{
+            width: 520px;
+            list-style: none;
+            position: absolute;
+        }
+        li{
+            width: 120px;
+            height: 120px;
+            margin-right: 10px;
+            background: #000000;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 120px;
+            float: left;
+        }
+        #arrow{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        #arrow span{
+            width: 100px;
+            height: 40px;
+            background: #ccc;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="arrow">
+        <span id="left">&lt&lt向左</span>
+        <span id="right">向右&gt&gt</span>
+    </div>
+</div>
+<script>
+    var oUl=document.getElementsByTagName("ul")[0];
+    var aLi=document.getElementsByTagName("li");
+    var oSpanLeft=document.getElementById("left");
+    var oSpanRight=document.getElementById("right");
+    var speed=-2;
+    oUl.innerHTML += oUl.innerHTML;   // 复制一份
+    oUl.style.width=(aLi[0].offsetWidth+10)*8+"px";
+    var timer=setInterval(function () {
+        oUl.style.left=oUl.offsetLeft+speed+"px"
+        if(oUl.offsetLeft <= -oUl.offsetWidth/2){
+            oUl.style.left = 0;
+        }else if(oUl.offsetLeft>=0){
+            oUl.style.left=-oUl.offsetWidth/2+"px";
+        }
+    },30)
+    oSpanRight.onmouseover=function () {
+        speed=2;
+    }
+    oSpanLeft.onmouseover=function () {
+        speed=-2;
+
+    }
+</script>
+</body>
+</html>

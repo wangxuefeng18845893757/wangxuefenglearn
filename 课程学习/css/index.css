@@ -11,6 +11,11 @@
     position: absolute;
     left: 0;
     top: 0;
+}
+.img-box a{
+    display: none;
+}
+.img-box .img-active{
     display: block;
 }
 .prev-btn,.next-btn{
@@ -56,7 +61,7 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.btns li:hover{
+.btns .selected{
     background: #898a8e;
     border:2px solid #4f4e56;
 }

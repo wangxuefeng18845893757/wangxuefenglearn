@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+
+</div>
+<script>
+    var oDiv1=document.getElementById("div1");
+    oDiv1.onclick=function () {
+        var timer=setInterval(function () {//setInterval 中this 指向window
+            oDiv1.style.width=oDiv1.offsetWidth+10+"px";
+            oDiv1.style.height=oDiv1.offsetHeight+10+"px";
+            if(oDiv1.offsetWidth>=500){
+                clearInterval(timer);
+            }
+        },50);
+    }
+</script>
+</body>
+</html>

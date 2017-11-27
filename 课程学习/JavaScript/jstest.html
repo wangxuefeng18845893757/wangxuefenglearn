@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #go-top{
+            height: 74px;
+            width: 35px;
+            background: red;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+        #go-top:hover{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:;" id="go-top"></a>
+<script>
+     var btn=document.getElementById("go-top");
+     btn.onclick=function () {
+        var iScrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+        var timer = setInterval(function () {
+            window.scrollTo(0,iScrolltop-=50);
+            //window.scrollTo(0,iScrolltop*=0.6);
+            if (iScrolltop<=1) {
+                clearInterval(timer);
+            }
+
+        },50);
+     }
+
+</script>
+</body>
+</html>

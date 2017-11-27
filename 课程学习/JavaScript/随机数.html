@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //随机生成两个小数给变量x.y，然后显示这两个数中的最大值。（提示：语句“var x=Math.random();”可为变量生成一个随机小数：另外，使用条件运算符‘'?:")
+
+     var x = Math.random();
+     var y = Math.random();
+     console.log("x:"+x);
+     console.log("y:"+y);
+     x>y ? console.log(x):console.log(y);
+     //利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数，
+    // 当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+    var x,y,z,win,isContinue=true,count=0,wCount=0;
+    function game() {
+        x=Math.floor(Math.random()*9)+1;
+        y=Math.floor(Math.random()*9)+1;
+        z=Math.floor(Math.random()*9)+1;
+        count++;
+        if(x==8||y==8||z==8){
+            win="赢";
+            wCount++;
+        }else {
+            win="输";
+        }
+    }
+    while (isContinue){
+        game();
+        isContinue=confirm(x+" "+y+" "+z+"\n"+win+"\n"+"获胜率是:"+wCount/count*100+"%");
+    }
+    //confirm弹出框既有取消按钮又有确定按钮，点击确定会返回true,点击取消会返回false
+</script>
+</body>
+</html>

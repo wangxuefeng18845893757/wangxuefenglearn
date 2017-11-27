@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    111
+</div>
+<ul id="ul1">
+    <li>0</li>
+    <li class="aa">1</li>
+    <li>2</li>
+    <li class="aa">3</li>
+</ul>
+<a href="#" id="1">不要点我！！！</a>
+<script>
+    var oDiv=document.getElementById("div1");//获取元素通过ID,返回dom对象，如果没有返回null
+    oDiv.onclick=function () {
+        oDiv.style.background="red";
+        oDiv.style.color="white";
+    }
+    var aLi=document.getElementsByTagName("li");//获取元素通过标签名，返回节点列表 类数组（数组的push等方法不可用），如果没有返回空数组
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].innerHTML=Math.random();
+    }
+    aLi[0].style.background="red";
+    var aLi2=document.getElementsByClassName("aa");//有兼容性问题
+    for(i=0;i<aLi2.length;i++){
+        aLi2[i].style.background="green";
+    }
+
+    var oA=document.getElementById("1");
+    oA.onclick=function () {
+        oA.innerHTML="手咋这么欠呢？";
+        oA.style.background="blue";
+        oA.style.color="white";
+    }
+    //document.getElementsByName()
+    //document.querySelector()获取元素通过选择器  格式与css 相同   只返回一个对象
+    //document.querySelectorall()获取元素通过选择器  格式与css 相同   可以返回多个值
+</script>
+</body>
+</html>

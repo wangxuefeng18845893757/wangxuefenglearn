@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #83c44e;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+       haha
+</div>
+<script>
+    var oDiv=document.getElementById("div1");
+    //可以同时绑两个事件 标准浏览器 addEventListener
+  /*  oDiv.addEventListener("click",function () {
+        alert(111);
+    },false);
+    oDiv.addEventListener("click",function () {
+        alert(222);
+    },false);
+    //ie 浏览器 attachEvent
+    oDiv.attachEvent("onclick",function () {
+        alert(111);
+    });
+    oDiv.attachEvent("click",function () {
+        alert(222);
+    });*/
+    //处理兼容性
+    function addEvent(elem,type,fn,flag) {
+        if(elem.addEventListener){
+            elem.addEventListener(type,fn,flag);
+        }else{
+            elem.attachEvent("on"+type,function () {
+                fn.call(elem);
+            });// 绑定事件时  this 指向 window   通过 call 改变指向
+        }
+    }
+    addEvent(oDiv,"click",function () {
+        alert(this.innerHTML);
+    },false);
+    /*阻止默认行为
+    return false; 所有都支持
+    e.preventDefault();标准浏览器
+    e.returnValue=false;ie 浏览器*/
+
+</script>
+</body>
+</html>

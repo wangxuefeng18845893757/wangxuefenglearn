@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)
+    function fac1(n) {
+        var num = 1;
+        for (i = 1; i <= n; i++) {
+            num *= i;
+        }
+        return num;
+    }
+    console.log(fac1(10));
+    //递归
+    function fac(n) {
+        if(n==1){
+            return 1;
+        }
+        return n*fac(n-1);
+    }
+    console.log(fac(10));
+</script>
+</body>
+</html>

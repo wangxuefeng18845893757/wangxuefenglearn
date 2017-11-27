@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small-box{
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        #drag{
+            width: 200px;
+            height: 200px;
+            background: #e0e0e0;
+            opacity: 0.5;
+            /*兼容ie*/
+            filter: alpha(opacity=50);
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #big-box{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 400px;
+            top: 0;
+            overflow: hidden;
+            display: none;
+        }
+        #big-box img{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+     <div id="small-box">
+         <img src="1.jpg">
+         <div id="drag"></div>
+     </div>
+     <div id="big-box">
+         <img src="2.jpg">
+     </div>
+     <script>
+         var oDrag=document.getElementById("drag");
+         var oSmallDiv=document.getElementById("small-box");
+         var oBigDiv=document.getElementById("big-box");
+         oSmallDiv.onmouseover=function () {
+             oDrag.style.display="block";
+             oBigDiv.style.display="block";
+             oSmallDiv.onmousemove();
+         }
+         oSmallDiv.onmousemove=function (e) {
+             e=e || window.event;
+             var iLeft=e.clientX - oDrag.offsetWidth/2;
+             var iTop=e.clientY - oDrag.offsetWidth/2;
+             var xMax=oSmallDiv.offsetWidth-oDrag.offsetWidth;
+             var yMax=oSmallDiv.offsetHeight-oDrag.offsetHeight;
+             if(iLeft<0){
+                 iLeft=0;
+             }
+             if(iLeft>xMax){
+                 iLeft=xMax;
+             }
+             if(iTop<0){
+                 iTop=0;
+             }
+             if(iTop>yMax){
+                 iTop=yMax;
+             }
+             oDrag.style.left= iLeft+ "px";
+             oDrag.style.top=  iTop + "px";
+             oBigDiv.firstElementChild.style.left=-iLeft*(oBigDiv.firstElementChild.offsetWidth/oSmallDiv.offsetWidth)+"px";
+             oBigDiv.firstElementChild.style.top=-iTop*(oBigDiv.firstElementChild.offsetHeight/oSmallDiv.offsetHeight)+"px";
+         }
+         oSmallDiv.onmouseout=function () {
+             oDrag.style.display="none";
+             oBigDiv.style.display="none";
+         }
+     </script>
+
+</body>
+</html>

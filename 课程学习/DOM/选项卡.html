@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 400px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        #btn{
+            overflow: hidden;
+        }
+        #btn li{
+            float: left;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: #ccc;
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #btn .selected{
+            background: #000;
+        }
+        #content div{
+            width: 400px;
+            height: 270px;
+            background: #ccc;
+            border-top:1px solid #000 ;
+            display: none;
+        }
+        #content .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="btn">
+        <li class="selected">111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <div id="content">
+        <div class="active">aaa</div>
+        <div>bbb</div>
+        <div>ccc</div>
+    </div>
+    <script src="../jquery/jquery-1.12.4.js"></script>
+    <script>
+       /* var aLi=document.getElementsByTagName("li");
+        var oDiv=document.getElementById("content");
+        var aDiv=oDiv.getElementsByTagName("div");
+        for (i=0;i<aLi.length;i++){
+            aLi[i].index = i;//自定义一个属性
+            aLi[i].onclick=function () {
+                for (j=0;j<aLi.length;j++){
+                    aLi[j].className="";
+                    aDiv[j].className="";
+                }
+                this.className="selected";
+                aDiv[this.index].className="active";
+            }
+        }*/
+       //jquery 实现
+       $("#btn li").on("click",function () {
+            $(this).addClass("selected").siblings().removeClass("selected");
+            $("#content div").eq($(this).index()).addClass("active").siblings().removeClass("active");
+       })
+    </script>
+</div>
+</body>
+</html>

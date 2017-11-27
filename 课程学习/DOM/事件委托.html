@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+           list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">click</button>
+<ul id="ul1">
+    <li>111</li>
+    <li>222</li>
+</ul>
+<script>
+    //通过冒泡解决后生成元素的事件绑定问题
+    var oBtn = document.getElementById("btn");
+    var oUl=document.getElementById("ul1");
+    var aLi=document.getElementsByTagName("li");
+    oBtn.onclick=function () {
+        var oLi=document.createElement("li");
+        oLi.innerHTML=Math.random();
+        oUl.appendChild(oLi);
+    }
+    //事件委托
+    oUl.onclick=function (e) {
+        e=e||window.event;
+        var target=e.target || e.srcElement;//获取事件源
+        if(target.tagName == "LI"){
+            alert(target.innerHTML);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li id="li0">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var oUl=document.getElementById("ul1");
+        var oLi=document.getElementById("li0");
+       // console.log(oLi.nextSibling);// 会输出文本节点  会计算入li后面的回车空格
+        function next(elem) {
+            do{
+                elem=elem.nextSibling;
+            }while(elem && elem.nodeType != 1);
+            return elem;
+        }
+        console.log(next(oLi));
+ /*       console.log(oUl.firstChild); // 会输出文本节点
+        console.log(oUl.firstElementChild);  //dom 3*/
+    </script>
+   <!--  节点遍历
+    firstChild  获取第一个节点；
+    lastChild
+    firstElementChild    获取第一个元素节点
+    nextSibling    下一个兄弟节点
+    previousSibling
+    childNodes (children)子节点列表
+    parentNode  父节点-->
+
+     <!--节点类型（nodetype）：元素节点（1）  属性节点（2） 文本节点（3）-->
+</body>
+</html>
