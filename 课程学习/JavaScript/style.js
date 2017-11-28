@@ -11,7 +11,7 @@ oSearch.onmouseout=function () {
     oSearch.className="search";
     oSearchText.className="search-text";
 }
-oSearch.onclick=function () {
+oSearchText.onfocus=function () {
     oSearch.className="search search-click";
     oSearchText.className="search-text search-text-click";
     oSearch.onmouseout="none";
@@ -21,6 +21,11 @@ oSearch.onclick=function () {
     }
     oCommendSearch.style.display="block";
 }
-document.onclick=function () {
-    oSearch.onclick=null;
+oSearchText.onblur=function () {
+    oSearch.className="search";
+    oSearchText.className="search-text";
+    oCommendSearch.style.display="none";
+    aA[0].innerHTML="小米MIX 2";
+    aA[1].innerHTML="小米Note 3";
+
 }
