@@ -213,10 +213,45 @@ img{
     height: 50px;
     border: 1px solid #b0b0b0;
     float: right;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-top: 25px;
     position: relative;
 
+}
+.search-active{
+    border: 1px solid #898a8e;
+}
+.search-click{
+    border: 1px solid #ff6700;
+}
+.commend-search{
+    height: 360px;
+    width: 245px;
+    position: absolute;
+    left: -1px;
+    bottom: -362px;
+    z-index: 5;
+    border: 1px solid #ff6700;
+    background: #fff;
+    display: none;
+}
+.search-item{
+    display: block;
+    width: 206px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+}
+.search-item a{
+    float: left;
+    height: 30px;
+    font-size: 12px;
+    color: #333;
+}
+.search-item span{
+    float: right;
+    font-size: 12px;
+    color: #b0b0b0;
 }
 .search-text{
     width: 225px;
@@ -227,6 +262,12 @@ img{
     padding: 0 10px;
     float: left;
 
+}
+.search-text-active{
+    border-right: 1px solid #898a8e;
+}
+.search-text-click{
+    border-right: 1px solid #ff6700;
 }
 .icon-fangdajing{
     display: block;
