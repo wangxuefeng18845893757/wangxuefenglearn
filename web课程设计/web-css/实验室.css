@@ -1,0 +1,25 @@
+.lab-img{
+    float: left;
+    height: 330px;
+    width: 600px;
+    margin: 0 10px;
+}
+.lab-img img{
+    height: 330px;
+    width: 600px;
+}
+.lab-introduce{
+    float: right;
+    height: 330px;
+    width: 360px;
+}
+.lab-introduce h4{
+    margin:5px 5px;
+    text-align: center;
+
+}
+.lab-introduce p{
+    margin-bottom: 5px;
+    text-indent: 2em;
+    line-height: 27px;
+}

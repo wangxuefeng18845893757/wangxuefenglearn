@@ -1,0 +1,30 @@
+.introduce ul{
+    float: left;
+    width: 220px;
+    height: 270px;
+    margin-left: 5px;
+
+}
+.introduce ul li{
+    height: 40px;
+    margin-bottom: 5px;
+    background: #b0b0b0;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+.introduce ul h2{
+    font-size: 16px;
+}
+.introduce .ul1{
+    margin-left: 150px;
+}
+.introduce p{
+    display: block;
+    margin: 10px 0px;
+    text-align: center;
+}
+.introduce .li1{
+    background: #7A7A7A;
+}

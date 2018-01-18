@@ -1,0 +1,106 @@
+.guide{
+    width: 430px;
+    height: 309px;
+    margin: 10px 10px;
+    float: left;
+}
+.guide-title{
+    width: 430px;
+    height: 30px;
+    border: 1px solid #b0b0b0;
+}
+.guide-title p{
+    line-height: 30px;
+    margin-left: 20px;
+    color: #2b4099;
+    font-size: 14px;
+    font-weight: bold;
+}
+.guide-main{
+    width: 430px;
+    height: 279px;
+   border: 1px solid #b0b0b0;
+    border-top: none;
+}
+.guide-main li{
+    width: 430px;
+    height: 34px;
+    overflow: hidden;
+}
+.guide-main .guide-idx{
+    width: 28px;
+    height: 24px;
+    margin: 5px 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 28px;
+    background: #ff6700;
+    border-radius: 5px;
+    color: #fff;
+    float: left;
+}
+.guide-main .old{
+    background: #7A7A7A;
+}
+.guide-main .guide-detail{
+    float: left;
+    height: 24px;
+    color: #6E6E6E;
+    line-height: 24px;
+    margin: 5px 0px;
+    font-size: 14px;
+}
+.guide-detail:hover{
+    color: #ff6700;
+    border-bottom: 1px solid #ff6700;
+}
+.guide-time{
+    float: right;
+    height: 24px;
+    color: #b0b0b0;
+    line-height: 24px;
+    margin: 5px 5px;
+    font-size: 14px;
+}
+.guide-phone{
+    float: right;
+    width: 215px;
+    height: 309px;
+    margin: 10px 10px;
+    position: relative;
+}
+.guide-phone img{
+    height: 312px;
+    width: 300px;
+    position: absolute;
+    left: -306px;
+}
+.guide-phone-title{
+    width: 215px;
+    height: 30px;
+    border: 1px solid #b0b0b0;
+}
+.guide-phone-title p{
+    line-height: 30px;
+    margin-left: 20px;
+    color: #2b4099;
+    font-size: 14px;
+    font-weight: bold;
+}
+.guide-phone-main{
+    width: 215px;
+    height: 279px;
+    border: 1px solid #b0b0b0;
+    border-top: none;
+    overflow: hidden;
+}
+.guide-phone-main .phone-detail{
+    margin: 5px;
+    font-size: 14px;
+}
+.guide-phone-main .top{
+    margin-top: 35px;
+}
+.guide-phone-main .bottom{
+    margin-bottom: 35px;
+}

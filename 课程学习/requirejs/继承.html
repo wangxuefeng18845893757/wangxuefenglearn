@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //类   具有相同属性方法的对象的集合
+    function A(name,age) {
+        this.name=name;
+        this.age=age;
+    }
+    A.prototype.say=function () {
+        console.log(this.name+" is saying........");
+    }
+    function B(name,age) {//this指向oB
+        A.call(this,name,age);//继承属性
+    }
+    B.prototype=new A();//继承方法
+    var oB=new B('b',10);
+    console.log(oB);
+    oB.say();
+</script>
+</body>
+</html>

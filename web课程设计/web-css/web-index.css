@@ -1,112 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-ul, ol{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-img{
-    border: 0;
-}
-.wrapper{
-    width: 1226px;
-    margin: 0 auto;
-}
-/* head 开始 */
-.head{
-    height: 201px;
-    width: 100%;
-    position: relative;
-}
-.head img{
-     height:100%;
-     width: 100%;
-}
-.head-write{
-    width: 300px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 395px;
-    text-align: center;
-}
-.head h1{
-    margin: 10px 0;
-    color: darkgreen;
-}
-.head h2{
-    color: darkgreen;
-}
-/* head 结束 */
-/* nav 开始 */
-.nav{
-    height: 40px;
-    background: #83c44e;
-    /*margin-top: 3px;*/
-    width: 100%;
-    position: relative;
-}
-.nav-item{
-    line-height: 40px;
-    float: left;
-    width: 110px;
-    position: relative;
-    text-align: center;
-}
-.nav-item a{
-    color: white;
-    width: 100%;
-    height: 100%;
-    float: left;
-    font-size: 14px;
-}
-.nav-item a:hover{
-    color: #83c44e;
-    background: white;
-}
-.nav-search{
-    float: right;
-    height: 40px;
-}
-.nav-search li{
-    float: left;
-    color: white;
-    line-height: 40px;
-    width: 110px;
-    text-align: right;
-}
-.nav-search li a{
-    color: white;
-}
-.nav-search li a:hover{
-    color: #2196f3;
-}
-.container{
-    width: 110px;
-    height: 0px;
-    background: #83c44e;
-    position: absolute;
-    top:40px;
-    text-align: center;
-    display: none;
-    z-index: 1;
-}
-.container-item a{
- font-size: 12px;
-}
-.nav-item:hover .container{
-    display: block;
-    animation: show 0.2s ease-in forwards;
-}
-@keyframes show {
-    100%{
-        height: 120px;
-    }
-}
-/* nav 结束 */
+
 /* news开始 */
 .body{
     padding-top: 10px;
@@ -228,9 +120,31 @@ img{
     height: 60px;
     line-height: 60px;
     padding-left: 10px;
+    position: relative;
+}
+.news-page i{
+    color: #b0b0b0;
 }
 .news-page a{
+    color: #4A4A4A;
+    font-size: 14px;
+}
+.news-page a:hover{
+    color: #ff6700;
+}
+.news-page span{
+    position: absolute;
+    right: 20px;
+    top: 0px;
     color: #b0b0b0;
+    font-size: 14px;
+}
+.news-page p{
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    color: #b0b0b0;
+    font-size: 12px;
 }
 /* news结束 */
 /* notice 开始 */
@@ -262,12 +176,55 @@ img{
     background: white;
     position: relative;
 }
+.notice-item a{
+    display: block;
+    color: #4A4A4A;
+    font-size: 14px;
+    margin: 55px 20px;
+    position: relative;
+
+
+}
+.notice-item p{
+    margin: 0 32px;
+    color: #b0b0b0;
+    text-align: right;
+    font-size: 14px;
+}
+.notice-item a:hover{
+    color: #ff6700;
+}
 .notice-item:hover{
     top: -1px;
     box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.1);
 }
 .notice .nomargin{
     margin-right: 0;
+}
+.border1 span{
+    border: 1px solid #00c0a5;
+}
+.border2 span{
+    border: 1px solid #e53935;
+}
+.border3 span{
+    border: 1px solid #2196f3;
+}
+.border4 span{
+    border: 1px solid #83c44e;
+}
+.border5 span{
+    border: 1px solid #ffac13;
+}
+.notice-list span{
+    display: block;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    border-top: none ;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
 }
 .border1{
     border-top: 1px solid #00c0a5;
@@ -314,34 +271,3 @@ img{
     width: 270px;
 }
 /* show 结束 */
-/* footer 开始 */
-.footer{
-    background: #f5f5f5;
-    height: 40px;
-}
-.footer-page{
-    background: white;
-    height: 40px;
-    border-top: 1px solid #757575;
-    position: relative;
-}
-.footer-page i{
-    position: absolute;
-    left: 45%;
-    bottom: -6px;
-    font-size: 40px;
-    height: 40px;
-    line-height: 40px;
-    color: #83c44e;
-}
-.footer-list{
-    padding: 4px 0;
-    height: 40px;
-    width: 100px;
-    position: absolute;
-    left: 48%;
-    font-size: 14px;
-    color: #b0b0b0;
-    text-align: center;
-}
-/* footer 结束 */

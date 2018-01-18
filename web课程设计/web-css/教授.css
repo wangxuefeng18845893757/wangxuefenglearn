@@ -1,0 +1,31 @@
+.introduce img{
+    width: 160px;
+    height: 144px;
+}
+
+.introduce li{
+    position: relative;
+    float: left;
+    width: 306px;
+    height: 144px;
+   margin: 10px 10px;
+}
+.grade{
+    position: absolute;
+    right:22px;
+    top: 37px;
+}
+.js-name{
+    position: absolute;
+    right:22px;
+    top: 70px;
+}
+.js-img{
+    display: block;
+    height: 144px;
+    width: 160px;
+    margin-left: 60px;
+}
+.introduce a{
+    color: #000;
+}

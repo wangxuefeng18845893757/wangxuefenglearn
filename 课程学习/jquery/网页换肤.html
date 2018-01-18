@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+            border: 1px solid #7A7A7A;
+            overflow: hidden;
+            width: 208px;
+            margin: 5px;
+
+        }
+        #skin-btn li{
+            width: 14px;
+            height: 14px;
+            background: url("jQuery练习/5_其它/2-网页换肤/css/theme.gif") 0 0 no-repeat;
+            float: left;
+            margin: 5px;
+
+        }
+        #skin-btn #skin-0{
+            background-position: 0px 0;
+        }
+        #skin-btn #skin-1{x
+            background-position: -20px 0;
+        }
+        #skin-btn #skin-2{
+            background-position: -40px 0;
+        }
+        #skin-btn #skin-3{
+            background-position: -60px 0;
+        }
+        #skin-btn #skin-4{
+            background-position: -80px 0;
+        }
+        #skin-btn #skin-5{
+            background-position: -100px 0;
+        }
+        #skin-btn #skin-0.selected{
+            background-position: 0 -15px;
+        }
+        #skin-btn #skin-1.selected{
+            background-position: -20px -15px;
+        }
+        #skin-btn #skin-2.selected{
+            background-position: -40px -15px;
+        }
+        #skin-btn #skin-3.selected{
+            background-position: -60px -15px;
+        }
+        #skin-btn #skin-4.selected{
+            background-position: -80px -15px;
+        }
+        #skin-btn #skin-5.selected{
+            background-position: -100px -15px;
+        }
+        #content div{
+            width: 100px;
+            height: 40px;
+            background: #ff0000;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+            margin: 5px;
+
+        }
+        #content div.skin-0{
+            background:#999999;
+        }
+        #content div.skin-1{
+            background:#AFD400;
+        }
+        #content div.skin-2{
+            background:#FBA60A;
+        }
+        #content div.skin-3{
+            background:#08BECE;
+        }
+        #content div.skin-4{
+            background:#E31559;
+        }
+        #content div.skin-5{
+            background:#BB3BD9;
+        }
+    </style>
+</head>
+<body>
+<ul id="skin-btn">
+    <li id="skin-0"></li>
+    <li id="skin-1"></li>
+    <li id="skin-2"></li>
+    <li id="skin-3"></li>
+    <li id="skin-4"></li>
+    <li id="skin-5"></li>
+</ul>
+<div id="content">
+    <div>时事新闻</div>
+    <div>娱乐新闻</div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $("#skin-btn li").on("click",function () {
+        $(this).addClass("selected").siblings().removeClass("selected");
+        var $skin=$(this).attr("id")
+        $("#content div").attr("class",$skin)
+    })
+    $("#skin-btn li").eq(3).trigger("click");
+
+</script>
+</body>
+</html>
