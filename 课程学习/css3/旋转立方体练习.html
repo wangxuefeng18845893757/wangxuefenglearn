@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+            -webkit-perspective: 800px;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d;/*-webkit-perspective: 800px;3D视角给不发生改变的父元素，子元素保持3D效果*/
+            -webkit-animation: run 2s linear/*（匀速）*/ infinite/*(循环)*/ ;
+        }
+        @keyframes run {
+                100%{
+                    -webkit-transform: rotateY(-360deg);
+                }
+        }
+        #div1,#div2,#div3,#div4,#div5,#div6{
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #div1{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+        }
+        #div2{
+            -webkit-transform: translateZ(100px);
+        }
+        #div3{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+        }
+        #div4{
+            -webkit-transform:rotateY(180deg) translateZ(100px);
+        }
+        #div5{
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+        }
+        #div6{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+    <div id="div5">5</div>
+    <div id="div6">6</div>
+</div>
+</body>
+</html>

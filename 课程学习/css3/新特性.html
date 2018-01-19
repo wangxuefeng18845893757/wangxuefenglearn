@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            position: absolute;
+        }
+        #div1{
+            border-color: #0000ff;
+            left: 0px;
+            top: 0px;
+        }
+        #div1::after{
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-color: #0000ff;
+            z-index: 5;
+            border-bottom: transparent;
+        }
+        #div2{
+            border-color: #000000;
+            left: 230px;
+            top: 0px;
+        }
+        #div2::after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: -10px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-color: #000000;
+            z-index: 3;
+            border-left: transparent;
+        }
+        #div3{
+            border-color: #ff0000;
+            left: 460px;
+            top: 0px;
+        }
+        #div3::after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: -10px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-color: #ff0000;
+            z-index: 5;
+            border-left: transparent;
+        }
+        #div4{
+            border-color: yellow;
+            left: 115px;
+            top: 110px;
+
+        }
+        #div4::after{
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-color: yellow;
+            border-right: transparent;
+        }
+        #div5{
+            border-color: #00ff00;
+            left: 350px;
+            top: 110px;
+        }
+        #div5::after{
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-color: #00ff00;
+            z-index: 4;
+            border-top: transparent;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<div id="div4"></div>
+<div id="div5"></div>
+     <!--
+     文本阴影  text-shadow
+     背景原点  background-origin(content-box)
+     背景大小  background-size
+     背景切割  background-clip
+     -->
+</body>
+</html>
