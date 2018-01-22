@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+        }
+        #cvs{
+            background: #fff;
+        }
+    </style>
+
+</head>
+<body>
+<canvas id="cvs" width="500" height="500">
+
+</canvas>
+<script>
+    var oCvs=document.querySelector('#cvs');
+    var oCtx=oCvs.getContext('2d');
+    oCvs.onmousedown=function (e) {
+        e=e || window.event;
+        var x=e.clientX;
+        var y=e.clientY;
+        oCtx.moveTo(x,y)
+        oCvs.onmousemove=function (e) {
+            e=e || window.event;
+            var x1=e.clientX;
+            var y1=e.clientY;
+            oCtx.lineTo(x1,y1)
+            oCtx.lineWidth=5;
+            oCtx.strokeStyle='green';
+            oCtx.stroke();
+        }
+    }
+    oCvs.onmouseup=function () {
+        oCvs.onmousemove = null;
+        oCtx.fillStyle='red'
+        oCtx.fill()
+    }
+
+</script>
+</body>
+</html>
