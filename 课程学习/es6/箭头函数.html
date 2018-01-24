@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        let aLi = document.getElementsByTagName('li');
+        for(var i=0;  i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                setTimeout(() => {
+                    console.log(this.index);
+            },1000);
+            }
+        }
+        /*
+        箭头函数中this指向   声明时候的this    不是调用时候的this
+        箭头函数中没有this   找到父上下文中的this
+        箭头函数中不予许使用  arguments
+        */
+    </script>
+</body>
+</html>
