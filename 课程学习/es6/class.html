@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class 创建类
+        class Person{
+            //属性放在constructor中
+            constructor(name,age){
+                this.name=name,
+                this.age=age
+            }
+            //由实例调用
+            say(){
+                console.log('my name is '+this.name);
+            }
+            //静态方法  只能由类调用
+            static a(){
+                console.log('haha');
+            }
+        }
+        //extends 继承类
+        class Child extends Person{
+            constructor(name,age,school){
+                super(name,age);
+                //添加自己的属性
+                this.school=school
+            }
+            //添加自己的方法
+        }
+        var p=new Person('wang',20);
+        p.say();
+        var c=new Child('xiaowang',10,'weichuang');
+        c.say();
+        Person.a();
+    </script>
+</body>
+</html>
