@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
     <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/slider.css" />
+	
     <script src="../js/jquery-1.11.0.min.js"></script>
     <script src="../js/jquery-migrate-1.2.1.min.js"></script>
     <script src="../js/bundle.js"></script>
@@ -17,10 +20,11 @@
     <script src="../js/main.js"></script>
     <script src="../js/prismjs.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/circleMagic.js"></script>
     <title>个人主页</title>
 </head>
 
-<body>
+<body class="demo-1">
         <div class="top-bar">
                
                 
@@ -33,7 +37,7 @@
     <div id="fsvs-body">
 
         <div class="slide bg-container">
-            <div class="bg-over"></div>
+            <div class="bg-over circleMagic"></div>
             <div class="header">
 
             </div>
@@ -49,7 +53,7 @@
             </div>
         </div>
         <div class="slide container">
-            <div class="over"></div>
+            <div class="over1"></div>
            
             <div class="base-info">
                 <div class="my-photo">
@@ -59,7 +63,7 @@
                         <p>Believe yourself</p>
                     </div>
                     <div class="photo-box">
-                        <img src="../image/my-photo.jpg" alt="W.">
+                        <img src="../image/isme.jpg" alt="W.">
                     </div>
         
                 </div>
@@ -78,19 +82,19 @@
             <div class="skill-show">
                 <div class="skill-desc">
                     <h3>What Can I Do For You ？</h3>
-                    <div class="ht">HTML
+                    <div class="h-t">HTML
                         <div class="desc">页面布局</div>
                     </div>
-                    <div class="cs">CSS
+                    <div class="c-s">CSS
                         <div class="desc">样式控制</div>
                     </div>
-                    <div class="js">JavaScript
+                    <div class="j-s">JavaScript
                         <div class="desc">事件操作</div>
                     </div>
-                    <div class="jq">J-Query
+                    <div class="j-q">J-Query
                         <div class="desc">炫酷动画</div>
                     </div>
-                    <div class="php">PHP
+                    <div class="p-h-p">PHP
                         <div class="desc">数据传输</div>
                     </div>
                 </div>
@@ -120,14 +124,52 @@
             </div>
         </div>
         <div class="slide container">
-            <div class="over"></div>
+           
+            <main>
+
+                <div class="content">
+                    <!-- Pieces Slider -->
+                    <div class="pieces-slider">
+                        <!-- Each slide with corresponding image and text -->
+                        <div class="pieces-slider__slide">
+                            <img class="pieces-slider__image" src="../image/slide1.png" alt="">
+                            <h2 class="pieces-slider__text">我的简历网站(本网站)</h2>
+                        </div>
+                        <div class="pieces-slider__slide">
+                            <img class="pieces-slider__image" src="../image/slide2.jpg" alt="">
+                            <h2 class="pieces-slider__text">WEB课设前端开发</h2>
+                        </div>
+                        <div class="pieces-slider__slide">
+                            <img class="pieces-slider__image" src="../image/slide5.jpg" alt="">
+                            <h2 class="pieces-slider__text">移动端APP开发</h2>
+                        </div>
+                        <div class="pieces-slider__slide">
+                            <img class="pieces-slider__image" src="../image/slide3.jpg" alt="">
+                            <h2 class="pieces-slider__text">初学前端仿站小米商城</h2>
+                        </div>
+                        <div class="pieces-slider__slide">
+                            <img class="pieces-slider__image" src="../image/slide4.jpg" alt="">
+                            <h2 class="pieces-slider__text">响应式设计仿站星巴克</h2>
+                        </div>
+                      
+                        <!-- Canvas to draw the pieces -->
+                        <canvas class="pieces-slider__canvas"></canvas>
+                        <!-- Slider buttons: prev and next -->
+                        <button class="pieces-slider__button pieces-slider__button--prev">Prev</button>
+                        <button class="pieces-slider__button pieces-slider__button--next">Next</button>
+                    </div>
+                </div>
+            </main>
         </div>
         <div class="slide container">
             <div class="over1"></div>
         </div>
     </div>
+    <script src='../js/anime.min.js'></script>
+	<script src='../js/pieces.min.js'></script>
+	<script src='../js/demo.js'></script>
+	
 
-   
 </body>
 
 </html>

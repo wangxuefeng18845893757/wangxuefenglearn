@@ -34,7 +34,7 @@ body{
     height: auto;
     background: #000000;
     position: fixed;
-    top: 10%;
+    top: 5%;
     left: 5%;
     color: #cc005f;
     font-weight: bold;
@@ -120,7 +120,7 @@ html.fsvs #fsvs-pagination{
     width: 222px;
     background:#000;
     position: fixed;
-    top: 35%;
+    top: 30%;
     left: 5%;
    
 }
@@ -153,7 +153,7 @@ html.fsvs #fsvs-pagination li a:hover{
     }
 }
 .content{
-    width:80%; 
+    
     margin: 0 auto;
     text-align: center;
     color: #ffffff; 
@@ -228,10 +228,10 @@ html.fsvs #fsvs-pagination li a:hover{
     height: 200px;
     border-radius: 100%;
     position: absolute;
+    top: 3%;
 }
 .my-photo img{
     width: 100%;
-    height: 100%;
     border-radius: 100%;
 }
 .back{
@@ -240,7 +240,7 @@ html.fsvs #fsvs-pagination li a:hover{
     border-radius: 100%;
     position: absolute;
     text-align: center;
-    border:2px solid #cc005f;
+    border:1px solid #cc005f;
     
     padding: 30px;
 
@@ -298,8 +298,9 @@ html.fsvs #fsvs-pagination li a:hover{
     text-align: left;
     margin: 50px 0;
     line-height: 40px;
-    color: #fff;
+    color: #ffffff;
     padding: 0 30px;
+    font-weight: 500;
     
    
 }
@@ -335,7 +336,7 @@ html.fsvs #fsvs-pagination li a:hover{
     width: 40%;
 }
 
-.ht{
+.h-t{
     background: #ef5b5b;
     margin-bottom:20px; 
     border-radius: 20px;
@@ -351,43 +352,43 @@ html.fsvs #fsvs-pagination li a:hover{
     transition: opacity 2s;
 
 }
-.ht:hover .desc{
+.h-t:hover .desc{
     opacity: 1;
 }
-.cs{
+.c-s{
     background: #ffc116;
     margin-bottom:20px;
     border-radius: 20px;
     position: relative;
 }
-.cs:hover .desc{
+.c-s:hover .desc{
     opacity: 1;
 }
-.js{
+.j-s{
     background: #20a39e;
     margin-bottom:20px;
     border-radius: 20px;
     position: relative;
 }
-.js:hover .desc{
+.j-s:hover .desc{
     opacity: 1;
 }
-.jq{
+.j-q{
     background: #7cb518;
     margin-bottom:20px;
     border-radius: 20px;
     position: relative;
 }
-.jq:hover .desc{
+.j-q:hover .desc{
     opacity: 1;
 }
-.php{
+.p-h-p{
     background: #cc005f;
     margin-bottom:20px; 
     border-radius: 20px;
     position: relative;
 }
-.php:hover .desc{
+.p-h-p:hover .desc{
     opacity: 1;
 }
 .skill{
