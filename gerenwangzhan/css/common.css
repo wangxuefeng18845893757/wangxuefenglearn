@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: rgba(0,0,0,.8);
+}
+.nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.nav .nav-grow{
+    width: 0px;
+    flex-grow: 1;
+    background: #fff;
+    border-right:1px solid lightgray ;
+    color: #808080;
+    font-size: 14px;
+    transform-style: preserve-3d;
+
+
+}
+.nav .nav-grow a{
+    color: #808080;
+}
+.nav .nav-content{
+    height: 50px;
+    padding-left: 20px;
+    line-height: 40px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.nav .over{
+    background: #000;
+    animation: flsh 1s ease forwards ;
+}
+.nav .over a{
+    color: #fff;
+}
+@keyframes flsh {
+    25%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.nav span{
+    display: block;
+    width: 16px;
+    height: 3px;
+    background-color: #c7c7c7;
+    margin-left: 1px;
+
+}
+.nav .active{
+    background: #000;
+
+}
+.nav .active a{
+    color: #fff;
+}
+.nav .active span{
+    background: #ff0000;
+}

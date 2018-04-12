@@ -1,0 +1,146 @@
+
+.content{
+    overflow: hidden;
+}
+.content .con-directors {
+    width: 100%;
+    position: relative;
+}
+.background-left{
+    /*background-color: rgba(255,255,255,1);*/
+    background: #ffffff;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: -4%;
+    top: 0;
+    transform: skewX(-10deg);
+    transition: width ease-out 1s;
+}
+/*.background-left:hover{*/
+    /*animation: left 1s ease-in forwards;*/
+/*}*/
+/*@keyframes left {*/
+    /*100%{*/
+        /*width: 0%;*/
+    /*}*/
+/*}*/
+.dir-catgory-left{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-align: left;
+    cursor: pointer;
+    width: 35%;
+    height: 55%;
+}
+.dir-catgory-left h1{
+    font-size: 110px;
+    line-height: 110px;
+    color: #2f2f2f;
+}
+.dir-catgory-left p{
+    font-size: 14px;
+    color: #2f2f2f;
+    line-height: 24px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+
+}
+.dir-catgory-left span{
+    display: block;
+    height: 10px;
+    width: 30%;
+    background: #2f2f2f;
+    position: absolute;
+    bottom: 0;
+}
+.dir-catgory-left:hover h1{
+    color: #fff;
+}
+.dir-catgory-left:hover p{
+    color: #74777b;
+}
+.dir-catgory-left:hover span{
+    background: #e74c4c;
+   animation: change 1s ease forwards;
+}
+@keyframes change {
+    100%{
+
+        width: 60%;
+    }
+}
+.background-right{
+    /*background-color: rgba(255,255,255,1);*/
+    background: #fff;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: -3%;
+    top: 0;
+    transform: skewX(-10deg);
+    transition: width ease-out 1s;
+}
+.dir-catgory-right{
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    text-align: right;
+    width:35%;
+    height: 55%;
+    cursor: pointer;
+
+}
+.dir-catgory-right h1{
+    font-size: 110px;
+    line-height: 110px;
+    color: #2f2f2f;
+
+}
+.dir-catgory-right p{
+    font-size: 14px;
+    color: #2f2f2f;
+
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.dir-catgory-right span{
+    display: block;
+    height: 10px;
+    width: 30%;
+    background: #2f2f2f;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.dir-catgory-right:hover h1{
+    color: #fff;
+}
+.dir-catgory-right:hover p{
+    color:#74777b;
+}
+.dir-catgory-right:hover span{
+    background: #e74c4c;
+    animation: change 1s ease forwards;
+}
+
+/*.background-right:hover{*/
+    /*animation: right 1s ease-in forwards;*/
+/*}*/
+/*@keyframes right {*/
+    /*100%{*/
+        /*width: 0%;*/
+    /*}*/
+/*}*/
+.dir_line{
+    width: 10px;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: skewX(-10deg);
+    transition: height 1s;
+    background-color: rgba(255,255,255,1);
+}
+
