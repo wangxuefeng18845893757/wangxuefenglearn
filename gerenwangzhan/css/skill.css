@@ -1,0 +1,74 @@
+
+#content{
+    margin: -250px 0 0 -400px;
+    height: 500px;
+}
+.sanyaosu{
+    height: 600px;
+    width: 300px;
+    float: left;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+.sanyaosu ul{
+    height: 500px;
+    position: absolute;
+    top: 20px;
+    overflow: hidden;
+}
+.sanyaosu li{
+    margin: 20px 90px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 30px;
+    font-family: 华文行楷;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+}
+.sanyaosu span{
+    width: 40px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+.sanyaosu .fuhao1{
+    background: transparent;
+    color: #000;
+    font-size: 80px;
+    position: absolute;
+    left: -300px;
+    top:80px;
+    opacity: 0;
+    transition: left 1s,opacity 1s;
+}
+.sanyaosu .tool{
+    position: absolute;
+    right: -300px;
+    top:160px;
+    opacity: 0;
+    transition: right 2s,opacity 2s;
+
+}
+.sanyaosu .fuhao2{
+    background: transparent;
+    color: #000;
+    font-size: 80px;
+    position: absolute;
+    left: -300px;
+    top:240px;
+    opacity: 0;
+    transition: left 3s,opacity 3s;
+}
+.sanyaosu .method{
+    position: absolute;
+    right: -300px;
+    top:320px;
+    opacity: 0;
+    transition: right 4s,opacity 4s;
+}
