@@ -9,6 +9,9 @@
     <title>王雪峰|个人网站|技能展示</title>
 </head>
 <body>
+    <div class="loading">
+        <img src="../image/loading.gif">
+    </div>
     <div class="nav">
     <div class="nav-grow">
 
@@ -157,5 +160,11 @@
     <script type="text/javascript" src="../js/skill.js"></script>
     <script type="text/javascript" src="../js/raphael.js"></script>
     <script type="text/javascript" src="../js/init.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loading").css('display','none');
+
+        })
+    </script>
 </body>
 </html>

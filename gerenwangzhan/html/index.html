@@ -8,6 +8,9 @@
     <title>王雪峰|个人网站|首页</title>
 </head>
 <body>
+    <div class="loading">
+        <img src="../image/loading.gif">
+    </div>
     <audio src="../assets/蔡照%20-%20孤.mp3" autoplay="autoplay" loop></audio>
     <div class="container">
         <div class="nav">
@@ -33,7 +36,7 @@
             <div class="nav-grow">
 
                 <div class="nav-content">
-                    <a href="product.html">
+                    <a href="index.html">
                         <h3>首页</h3>
                         <span></span>
                     </a>
@@ -78,8 +81,15 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/commen.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loading").css('display','none');
+            $("body").css('background','rgba(0,0,0,0.8)');
+        })
+    </script>
 </body>
 </html>

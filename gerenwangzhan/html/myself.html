@@ -9,6 +9,9 @@
     <title>王雪峰|个人网站|关于我</title>
 </head>
 <body>
+    <div class="loading">
+        <img src="../image/loading.gif">
+    </div>
     <div class="nav">
         <div class="nav-grow">
 
@@ -60,7 +63,7 @@
     <div class="container">
         <div class="left-container">
             <div class="left-img-box">
-                <img src="../image/my-photo.jpg">
+                <img src="../image/myphoto.jpg">
             </div>
             <div class="left-content">
                 <h3>道系少年的我:</h3>
@@ -85,13 +88,13 @@
                 <div class="school-box">
                     <div class="school-img"></div>
                     <div class="school-1">东北林业大学</div>
-                    <div class="school-2">本科三年级</div>
+                    <div class="school-2">2015级软件工程</div>
                 </div>
             </div>
         </div>
         <div class="right-container">
             <div class="right-img-box">
-                <img src="../image/my-photo.jpg">
+                <img src="../image/myphoto.jpg">
             </div>
             <div class="right-content">
                 <h3>佛系少年的我:</h3>
@@ -119,7 +122,8 @@
                         <p class="my-do-desc">
                             <strong>后端开发:</strong></br>
                             了解后端php语言,能够对数据库进行增、删、改、查操作,能够应用CI框架进行后端开发,自己做过一个博客项目,具备基本
-                            的注册、登录、发表博客、以及评论等功能,了解Node.js,我的理想是做一名全栈工程师.
+                            的注册、登录、发表博客、以及评论等功能,团队开发过微信小程序(一个可以互交的英语翻译平台),前后端都有参与,比如
+                            基于Token的登录验证,同时还了解Node.js.
                         </p>
                     </div>
                 </div>
@@ -140,5 +144,11 @@
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/commen.js"></script>
     <script type="text/javascript" src="../js/myself.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loading").css('display','none');
+            $("body").css('background','rgba(0,0,0,0.8)');
+        })
+    </script>
 </body>
 </html>

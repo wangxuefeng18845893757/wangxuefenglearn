@@ -9,6 +9,9 @@
     <title>王雪峰|个人网站|联系</title>
 </head>
 <body>
+    <div class="loading">
+        <img src="../image/loading.gif">
+    </div>
     <div class="nav">
     <div class="nav-grow">
 
@@ -102,5 +105,11 @@
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/commen.js"></script>
     <script type="text/javascript" src="../js/connect.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loading").css('display','none');
+            $("body").css('background','#D7D7D7');
+        })
+    </script>
 </body>
 </html>

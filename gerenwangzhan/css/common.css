@@ -9,7 +9,7 @@ ul{
     list-style: none;
 }
 body{
-    background-color: rgba(0,0,0,.8);
+    background: #062734;
 }
 .nav{
     width: 100%;
@@ -77,4 +77,11 @@ body{
 }
 .nav .active span{
     background: #ff0000;
+}
+.loading img{
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -150px;
 }
